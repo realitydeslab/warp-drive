@@ -17,7 +17,7 @@ MonoBehaviour:
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: -220
+    x: -221
     y: -270
     width: 1290
     height: 1996
@@ -292,7 +292,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 2500
+      m_SerializableObject: 8000
     m_Space: 2147483647
   m_Property:
     name: Rate
