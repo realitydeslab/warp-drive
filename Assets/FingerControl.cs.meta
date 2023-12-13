@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/FingerControl.cs.meta
 guid: 182768866649f4684a177d129a83e1f8
+========
+guid: 0a2604e750679431d8d360a509cc5dd6
+>>>>>>>> 00e1d45a1cd10e96d081d7d05ea84de3646bf7e2:Assets/WarpDrive/Scripts/OriginReseter.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
