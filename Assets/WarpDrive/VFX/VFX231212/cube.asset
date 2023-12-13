@@ -23,12 +23,12 @@ Texture3D:
   m_DataSize: 524288
   m_TextureSettings:
     serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 0
+    m_FilterMode: 1
+    m_Aniso: 1
     m_MipBias: 0
-    m_WrapU: 3
-    m_WrapV: 3
-    m_WrapW: 3
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
   m_UsageMode: 0
   m_IsReadable: 1
   image data: 524288
