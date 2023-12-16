@@ -147,20 +147,22 @@ int HoloKitVideoRecorder_AppendAudioFrame(void* source, int size, double time)
 
     int nSamples = size / _audioFormat.mBytesPerFrame;
 
-     AudioStreamBasicDescription audioFormat = *CMAudioFormatDescriptionGetStreamBasicDescription(_audioFormat);
+//     AudioStreamBasicDescription audioFormat = *CMAudioFormatDescriptionGetStreamBasicDescription(_audioFormat);
 
     CMSampleBufferRef sampleBuffer;
-    status = CMAudioSampleBufferCreateReadyWithPacketDescriptions(kCFAllocatorDefault,
-                                                             blockBuffer,
-                                                             presentationTimestamp, _cmFormat, &sampleBuffer);
-                                                             TRUE,
-                                                             NULL,
-                                                             NULL,
-                                                             _cmFormat,
-                                                             nSamples,
-                                                             presentationTimestamp,
-                                                             NULL,
-                                                             &sampleBuffer);
+    status = CMAudioSampleBufferCreateWithPacketDescriptions(kCFAllocatorDefault,
+                                                                blockBuffer,
+
+                                                                TRUE,
+                                                                NULL,
+                                                                NULL,
+                                                                _cmFormat,
+                                                                nSamples,
+                                                                presentationTimestamp,
+                                                                NULL,
+                                                                &sampleBuffer);
+       
+
     
     if (status != noErr) {
         CFRelease(blockBuffer);

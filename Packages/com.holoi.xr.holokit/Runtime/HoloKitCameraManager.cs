@@ -95,7 +95,7 @@ namespace HoloKit
                 {
                     if (value == HoloKitRenderMode.Stereo)
                     {
-                        HoloKitNFCSessionControllerAPI.StartNFCSession(HoloKitType.HoloKitX, _ipd, _farClipPlane);
+                        HoloKitNFCSessionControllerAPI.SkipNFCSessionWithPassword("SomethingForNothing", HoloKitType.HoloKitX, _ipd, _farClipPlane);
                     }
                     else
                     {

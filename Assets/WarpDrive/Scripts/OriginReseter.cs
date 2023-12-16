@@ -27,8 +27,8 @@ public class OriginReseter : MonoBehaviour
         if (lastTrackedImageTransform != null)
         {
 
-            var r = Matrix4x4.Rotate(lastTrackedImageTransform.rotation).transpose *
-                    Matrix4x4.Rotate(imageMaker.transform.rotation);
+            var r = Matrix4x4.Rotate(imageMaker.transform.rotation).transpose *
+                    Matrix4x4.Rotate(lastTrackedImageTransform.rotation);
             var a =  (r.m00 + r.m22);
             var b =  (-r.m20 + r.m02);
              
@@ -36,7 +36,7 @@ public class OriginReseter : MonoBehaviour
 
             Matrix4x4 rotation = Matrix4x4.Rotate(Quaternion.AngleAxis(thetaInDeg, Vector3.up));
 
-            Vector3 translate = -rotation.MultiplyPoint3x4(lastTrackedImageTransform.position - imageMaker.transform.position);
+            Vector3 translate = -rotation.MultiplyPoint3x4(imageMaker.transform.position - lastTrackedImageTransform.position );
             
             Debug.Log(translate);
             Debug.Log(thetaInDeg);

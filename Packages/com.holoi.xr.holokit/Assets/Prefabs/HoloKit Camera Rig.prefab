@@ -469,6 +469,7 @@ GameObject:
   - component: {fileID: 5248665579202815520}
   - component: {fileID: 8066117478303309264}
   - component: {fileID: 8895161548815359199}
+  - component: {fileID: 5336281057477793680}
   m_Layer: 0
   m_Name: Mono Camera
   m_TagString: MainCamera
@@ -729,8 +730,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _recordMicrophone: 0
-  _videoBitRate: 10000000
-  _audioBitRate: 44100
 --- !u!114 &8895161548815359199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,3 +774,20 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &5336281057477793680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8854260241308543658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b15f82cc229284894964d2d30806969d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HumanSegmentationStencilMode: 0
+  m_HumanSegmentationDepthMode: 0
+  m_EnvironmentDepthMode: 1
+  m_EnvironmentDepthTemporalSmoothing: 1
+  m_OcclusionPreferenceMode: 0

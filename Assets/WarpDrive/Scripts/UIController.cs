@@ -28,8 +28,6 @@ namespace HoloKit
             }
             else
             {
-                HoloKitCameraManager.Instance.RenderMode = HoloKitRenderMode.Stereo;
-
                 // Skip NFC scanning
                 HoloKitCameraManager.Instance.OpenStereoWithoutNFC("SomethingForNothing");
             }

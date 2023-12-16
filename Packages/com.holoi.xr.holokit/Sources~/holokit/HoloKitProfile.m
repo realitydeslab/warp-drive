@@ -240,7 +240,7 @@
             phoneModel.CameraOffset = simd_make_float3(0.04652, -0.0598, -0.00773);
             phoneModel.ScreenDpi = 460;
             break;
-        case iPad:
+        case iPadWithLidar:
         case Unknown:
         default:
             phoneModel.ScreenWidth = 0.15390;
@@ -272,7 +272,7 @@
 
 + (BOOL)IsCurrentDeviceIpad {
     PhoneType phoneType = [HoloKitProfile getPhoneType];
-    return phoneType == iPad;
+    return phoneType == iPadWithLidar;
 }
 
 + (BOOL)IsCurrentDeviceEquippedWithLiDAR {

@@ -1514,6 +1514,63 @@ Transform:
   - {fileID: 1183760024}
   m_Father: {fileID: 702128780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &509576398
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7659984778512274044, guid: d0e23436248bb45da82ad547e89d1b94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659984778512274044, guid: d0e23436248bb45da82ad547e89d1b94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659984778512274044, guid: d0e23436248bb45da82ad547e89d1b94, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659984778512274044, guid: d0e23436248bb45da82ad547e89d1b94, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659984778512274044, guid: d0e23436248bb45da82ad547e89d1b94, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659984778512274044, guid: d0e23436248bb45da82ad547e89d1b94, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659984778512274044, guid: d0e23436248bb45da82ad547e89d1b94, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659984778512274044, guid: d0e23436248bb45da82ad547e89d1b94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659984778512274044, guid: d0e23436248bb45da82ad547e89d1b94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659984778512274044, guid: d0e23436248bb45da82ad547e89d1b94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659984778512274047, guid: d0e23436248bb45da82ad547e89d1b94, type: 3}
+      propertyPath: m_Name
+      value: HoloKit Driver
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d0e23436248bb45da82ad547e89d1b94, type: 3}
 --- !u!1 &565074368
 GameObject:
   m_ObjectHideFlags: 0
@@ -2683,7 +2740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &748120095
 Transform:
   m_ObjectHideFlags: 0
@@ -3860,6 +3917,10 @@ PrefabInstance:
     - target: {fileID: 5248665579202815520, guid: 8c3baeda8ec2e42179a64fba10a812b1, type: 3}
       propertyPath: _forceScreenOrientation
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336281057477793680, guid: 8c3baeda8ec2e42179a64fba10a812b1, type: 3}
+      propertyPath: m_OcclusionPreferenceMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5626992625800642032, guid: 8c3baeda8ec2e42179a64fba10a812b1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5566,6 +5627,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1770651951}
   - {fileID: 1790255692}
+  - {fileID: 509576398}
   - {fileID: 1899285080}
   - {fileID: 665450718}
   - {fileID: 585716138}
