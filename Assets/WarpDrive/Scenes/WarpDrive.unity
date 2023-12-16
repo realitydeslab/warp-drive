@@ -3238,7 +3238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &694307071
 Transform:
   m_ObjectHideFlags: 0
@@ -3249,7 +3249,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1015509332}
@@ -3309,8 +3309,8 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694307070}
-  m_Enabled: 0
-  m_CastShadows: 1
+  m_Enabled: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -3349,7 +3349,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694307070}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 9365f6e1f56843949b7d49dd7eae7b5d, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 3fbb22b2127fe1442a43bd5f85e52c24, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -3442,7 +3442,7 @@ VisualEffect:
       - m_Value: 1
         m_Name: bool2
         m_Overridden: 1
-      - m_Value: 0
+      - m_Value: 1
         m_Name: Hand-Stele
         m_Overridden: 1
       - m_Value: 0
@@ -5154,7 +5154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1015509331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9982,13 +9982,13 @@ VisualEffect:
       - m_Value: 1
         m_Name: wall-hand
         m_Overridden: 1
-      - m_Value: 0
+      - m_Value: 1
         m_Name: Hand-Stele
         m_Overridden: 1
       - m_Value: 1
         m_Name: Information module disappears
         m_Overridden: 1
-      - m_Value: 0
+      - m_Value: 1
         m_Name: Wall-Hand
         m_Overridden: 1
 --- !u!4 &2070365666
