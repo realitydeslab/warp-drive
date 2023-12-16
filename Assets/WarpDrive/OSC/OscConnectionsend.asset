@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: OscConnectionsend
   m_EditorClassIdentifier: 
   type: 0
-  host: 10.70.247.50
-  port: 9999
+  host: 10.61.87.254
+  port: 8888

@@ -8,7 +8,9 @@ public class FingerControl : MonoBehaviour
 {
     public GameObject finger;
     public GameObject Originfinger;
-    public GameObject portalVfx;
+    public GameObject portalVfx1;
+    public GameObject portalVfx2;
+    public GameObject portalVfx3;
     private Vector3 lastFingerPosition;
 
     // Start is called before the first frame update
@@ -21,12 +23,24 @@ public class FingerControl : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+{
+    if (Originfinger.transform.position != lastFingerPosition && portalVfx1.activeSelf)
     {
-        if (Originfinger.transform.position != lastFingerPosition && portalVfx.activeSelf)
-        {
-            finger.SetActive(true);
-            portalVfx.GetComponent<VisualEffect>().SetBool("Wall-Hand", true); 
-        }
+        finger.SetActive(true);
+        portalVfx1.GetComponent<VisualEffect>().SetBool("Wall-Hand", true); 
         lastFingerPosition = Originfinger.transform.position;
     }
+    if (Originfinger.transform.position != lastFingerPosition && portalVfx2.activeSelf)
+    {
+        finger.SetActive(true);
+        portalVfx2.GetComponent<VisualEffect>().SetBool("Wall-Hand", true); 
+        lastFingerPosition = Originfinger.transform.position;
+    }
+    if (Originfinger.transform.position != lastFingerPosition && portalVfx3.activeSelf)
+    {
+        finger.SetActive(true);
+        portalVfx3.GetComponent<VisualEffect>().SetBool("Wall-Hand", true); 
+        lastFingerPosition = Originfinger.transform.position;
+    }
+}
 }
