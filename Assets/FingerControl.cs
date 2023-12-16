@@ -7,7 +7,7 @@ using UnityEngine.VFX;
 public class FingerControl : MonoBehaviour
 {
     public GameObject finger;
-    public GameObject Originfinger;
+    public GameObject originFinger;
     public GameObject portalVfx1;
     public GameObject portalVfx2;
     public GameObject portalVfx3;
@@ -18,29 +18,29 @@ public class FingerControl : MonoBehaviour
     {
         finger.SetActive(false);
         finger.GetComponent<ParentConstraint>().constraintActive = true;
-        lastFingerPosition = Originfinger.transform.position;
+        lastFingerPosition = originFinger.transform.position;
     }
 
     // Update is called once per frame
     void Update()
 {
-    if (Originfinger.transform.position != lastFingerPosition && portalVfx1.activeSelf)
+    if (originFinger.transform.position != lastFingerPosition && portalVfx1.activeSelf)
     {
         finger.SetActive(true);
         portalVfx1.GetComponent<VisualEffect>().SetBool("Wall-Hand", true); 
-        lastFingerPosition = Originfinger.transform.position;
+        lastFingerPosition = originFinger.transform.position;
     }
-    if (Originfinger.transform.position != lastFingerPosition && portalVfx2.activeSelf)
+    if (originFinger.transform.position != lastFingerPosition && portalVfx2.activeSelf)
     {
         finger.SetActive(true);
         portalVfx2.GetComponent<VisualEffect>().SetBool("Wall-Hand", true); 
-        lastFingerPosition = Originfinger.transform.position;
+        lastFingerPosition = originFinger.transform.position;
     }
-    if (Originfinger.transform.position != lastFingerPosition && portalVfx3.activeSelf)
+    if (originFinger.transform.position != lastFingerPosition && portalVfx3.activeSelf)
     {
         finger.SetActive(true);
         portalVfx3.GetComponent<VisualEffect>().SetBool("Wall-Hand", true); 
-        lastFingerPosition = Originfinger.transform.position;
+        lastFingerPosition = originFinger.transform.position;
     }
 }
 }

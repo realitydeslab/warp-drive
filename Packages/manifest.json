@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.holoi.xr.holokit": "https://github.com/holoi/holokit-sdk.git?path=/Packages/com.holoi.xr.holokit/",
     "com.unity.feature.development": "1.0.1",
     "com.unity.render-pipelines.universal": "14.0.9",
     "com.unity.textmeshpro": "3.0.6",

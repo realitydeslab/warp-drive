@@ -1,17 +1,16 @@
 {
   "dependencies": {
     "com.holoi.xr.holokit": {
-      "version": "https://github.com/holoi/holokit-sdk.git?path=/Packages/com.holoi.xr.holokit/",
+      "version": "file:com.holoi.xr.holokit",
       "depth": 0,
-      "source": "git",
+      "source": "embedded",
       "dependencies": {
         "com.unity.xr.arfoundation": "5.1.1",
         "com.unity.xr.arkit": "5.1.1",
         "com.unity.xr.management": "4.4.0",
         "com.unity.xr.hands": "1.3.0",
         "com.unity.xr.interaction.toolkit": "2.5.2"
-      },
-      "hash": "de4c2c963c76bcf27c6b5f3dabc370e65db6d7be"
+      }
     },
     "com.unity.burst": {
       "version": "1.8.11",
