@@ -9,9 +9,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fc33fd9d04d644019471cb272c0fe46, type: 3}
-  m_Name: OscConnectionsend
+  m_Script: {fileID: 11500000, guid: 191492db6e452eb468b95433ec162164, type: 3}
+  m_Name: InteractionLayerSettings
   m_EditorClassIdentifier: 
-  type: 0
-  host: 10.61.87.254
-  port: 8888
+  m_LayerNames:
+  - Default
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 

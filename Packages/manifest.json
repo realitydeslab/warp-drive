@@ -1,9 +1,7 @@
 {
   "dependencies": {
-    "com.holoi.xr.holokit": "https://github.com/holoi/holokit-unity-sdk.git",
-    "com.unity.collab-proxy": "2.2.0",
+    "com.holoi.xr.holokit": "https://github.com/holoi/holokit-sdk.git?path=/Packages/com.holoi.xr.holokit/",
     "com.unity.feature.development": "1.0.1",
-    "com.unity.postprocessing": "3.2.2",
     "com.unity.render-pipelines.universal": "14.0.9",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.6",

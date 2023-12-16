@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fc33fd9d04d644019471cb272c0fe46, type: 3}
-  m_Name: OscConnectionreceive
+  m_Name: OscConnectionReceiver
   m_EditorClassIdentifier: 
   type: 0
   host: 10.61.87.254
