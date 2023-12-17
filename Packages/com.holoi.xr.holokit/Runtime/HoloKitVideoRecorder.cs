@@ -237,8 +237,6 @@ namespace HoloKit {
 
             var path = PathUtil.GetTemporaryFilePath();
 
-            Debug.LogError(AudioSettings.outputSampleRate);
-
             var sampleRate = AudioSettings.outputSampleRate;
             var channelCount = 2;
             var width = Screen.width;
@@ -275,8 +273,6 @@ namespace HoloKit {
             _bufferFrame = null;
             Destroy(_bufferCamera);
             _bufferCamera = null;
-
-            Debug.Log("EndRecording recorded");
         }
 
         unsafe void OnSourceReadback(AsyncGPUReadbackRequest request)
@@ -290,7 +286,6 @@ namespace HoloKit {
             if (status != 0) {
                 Debug.LogError($"Cannot Append Video Frame at time {timestamp}");
             }
-            Debug.Log($"frame recorded {data.Length} time: {timestamp}");
         }
 
         void Update() {
@@ -336,7 +331,6 @@ namespace HoloKit {
 
             HoloKitVideoRecorder_AppendAudioFrame(ptr, length, timestamp);
             nativeArray.Dispose();
-            Debug.Log($"audio frame recorded {data.Length} time: {timestamp}");
         }
 
         void CommitFrame(Camera source, RenderTexture destination) 
