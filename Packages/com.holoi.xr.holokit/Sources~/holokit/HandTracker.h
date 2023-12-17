@@ -7,7 +7,7 @@
 
 @interface HandTracker : NSObject
 
-@property (assign) BOOL active;
+@property (assign) bool active;
 
 + (id)sharedInstance;
 - (void)performHumanHandPoseRequest:(ARFrame *)frame;

@@ -40,12 +40,16 @@
 		9605FE4C2AFE332A00925F49 /* position_data.cc in Sources */ = {isa = PBXBuildFile; fileRef = 9605FE122AFE325B00925F49 /* position_data.cc */; };
 		963F1F242B14FEC400F20056 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963F1F232B14FEC400F20056 /* Metal.framework */; };
 		9674DCF62B2173BD00F32A19 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9674DCF52B2173BD00F32A19 /* Accelerate.framework */; };
-		969F171D2B12861B00F8CA69 /* HoloKitVideoRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 969F171C2B12861B00F8CA69 /* HoloKitVideoRecorder.mm */; };
-		969F17692B12998900F8CA69 /* HoloKitVideoRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 969F171C2B12861B00F8CA69 /* HoloKitVideoRecorder.mm */; };
 		969F176A2B12999300F8CA69 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969F17592B12986C00F8CA69 /* CoreVideo.framework */; };
 		969F176B2B12999600F8CA69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969F17552B12982C00F8CA69 /* AVFoundation.framework */; };
 		969F176C2B12999B00F8CA69 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969F17572B12985300F8CA69 /* CoreMedia.framework */; };
 		96C102C1279152B30052AF2B /* CryptoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C102C0279152B30052AF2B /* CryptoKit.framework */; };
+		96D052212B2E9D480082C34D /* VideoRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 96D052202B2E9D480082C34D /* VideoRecorder.mm */; };
+		96D052222B2EB51E0082C34D /* VideoRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 96D052202B2E9D480082C34D /* VideoRecorder.mm */; };
+		96D052252B2EB5290082C34D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D052242B2EB5290082C34D /* AudioToolbox.framework */; };
+		96D052262B2EB5510082C34D /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9674DCF52B2173BD00F32A19 /* Accelerate.framework */; };
+		96D052272B2EB55A0082C34D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969F17592B12986C00F8CA69 /* CoreVideo.framework */; };
+		96D052282B2EB5600082C34D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969F17552B12982C00F8CA69 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -154,12 +158,14 @@
 		9666E9902572395C00A7F127 /* HandTracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandTracker.framework; path = sdk/third_party/HandTracker.framework; sourceTree = "<group>"; };
 		9666EAB32572692700A7F127 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		9674DCF52B2173BD00F32A19 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
-		969F171C2B12861B00F8CA69 /* HoloKitVideoRecorder.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HoloKitVideoRecorder.mm; sourceTree = "<group>"; };
 		969F17552B12982C00F8CA69 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		969F17572B12985300F8CA69 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
 		969F17592B12986C00F8CA69 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
 		969F17652B12998200F8CA69 /* libholokit-sdk-macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libholokit-sdk-macos.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C102C0279152B30052AF2B /* CryptoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/CryptoKit.framework; sourceTree = DEVELOPER_DIR; };
+		96D0521F2B2E9D420082C34D /* VideoRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRecorder.h; sourceTree = "<group>"; };
+		96D052202B2E9D480082C34D /* VideoRecorder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoRecorder.mm; sourceTree = "<group>"; };
+		96D052242B2EB5290082C34D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D052282B2EB5600082C34D /* AVFoundation.framework in Frameworks */,
+				96D052272B2EB55A0082C34D /* CoreVideo.framework in Frameworks */,
+				96D052262B2EB5510082C34D /* Accelerate.framework in Frameworks */,
 				96C102C1279152B30052AF2B /* CryptoKit.framework in Frameworks */,
 				4B6C944B2614B70D00CBDFB4 /* ARKit.framework in Frameworks */,
 				4B6C944A2614B70900CBDFB4 /* Metal.framework in Frameworks */,
@@ -177,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D052252B2EB5290082C34D /* AudioToolbox.framework in Frameworks */,
 				963F1F242B14FEC400F20056 /* Metal.framework in Frameworks */,
 				969F176C2B12999B00F8CA69 /* CoreMedia.framework in Frameworks */,
 				9674DCF62B2173BD00F32A19 /* Accelerate.framework in Frameworks */,
@@ -226,11 +236,12 @@
 		4BE7B60C261104ED001F39F2 /* holokit */ = {
 			isa = PBXGroup;
 			children = (
+				96D052202B2E9D480082C34D /* VideoRecorder.mm */,
+				96D0521F2B2E9D420082C34D /* VideoRecorder.h */,
 				9605FDF22AFE320000925F49 /* LowLatencyTracking */,
 				4B341B082859DEB0006AB99C /* UnityPluginApi */,
 				4B6C941F261493E300CBDFB4 /* ARSessionDelegateManager.mm */,
 				4BB5587226205B7D00DC0213 /* NFCSessionController.m */,
-				969F171C2B12861B00F8CA69 /* HoloKitVideoRecorder.mm */,
 				4B981F922869B8180021F1EF /* HandTracker.h */,
 				4B188ACF26F432B4001FD67D /* HandTracker.mm */,
 				4BD9A6A0278AA53C000BD266 /* Crypto.swift */,
@@ -361,6 +372,7 @@
 		96602188253935D7004019A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96D052242B2EB5290082C34D /* AudioToolbox.framework */,
 				9674DCF52B2173BD00F32A19 /* Accelerate.framework */,
 				963F1F232B14FEC400F20056 /* Metal.framework */,
 				969F17592B12986C00F8CA69 /* CoreVideo.framework */,
@@ -538,7 +550,7 @@
 				9605FE2B2AFE32C700925F49 /* matrix_3x3.cc in Sources */,
 				4B188AD026F432B4001FD67D /* HandTracker.mm in Sources */,
 				4BE74F4F288540DD0086FB89 /* HoloKitOptics.mm in Sources */,
-				969F171D2B12861B00F8CA69 /* HoloKitVideoRecorder.mm in Sources */,
+				96D052212B2E9D480082C34D /* VideoRecorder.mm in Sources */,
 				4BD9A6A1278AA53C000BD266 /* Crypto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,7 +559,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				969F17692B12998900F8CA69 /* HoloKitVideoRecorder.mm in Sources */,
+				96D052222B2EB51E0082C34D /* VideoRecorder.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,12 +33,12 @@ typedef enum {
 @property (nonatomic, weak, nullable) id <ARSessionDelegate> unityARSessionDelegate;
 @property (nonatomic, strong, nullable) ARSession *arSession;
 @property (nonatomic, strong, nullable) ARWorldMap *worldMap;
-@property (assign) BOOL scaningEnvironment;
+@property (assign) bool scaningEnvironment;
 @property (assign) ARWorldMappingStatus currentARWorldMappingStatus;
-@property (assign) BOOL sessionShouldAttemptRelocalization;
-@property (assign) BOOL isRelocalizing;
+@property (assign) bool sessionShouldAttemptRelocalization;
+@property (assign) bool isRelocalizing;
 @property (assign) VideoEnhancementMode videoEnhancementMode;
-@property (assign) BOOL isNotFirstARSessionFrame;
+@property (assign) bool isNotFirstARSessionFrame;
 
 @end
 

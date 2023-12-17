@@ -17,7 +17,7 @@ void (*OnNFCSessionCompleted)(bool, float *) = NULL;
 @interface NFCSessionController () <NFCTagReaderSessionDelegate>
 
 @property (nonatomic, strong) NFCTagReaderSession* readerSession;
-@property (assign) BOOL success;
+@property (assign) bool success;
 @property (assign) int holokitType;
 @property (assign) float ipd;
 @property (assign) float farClipPlane;

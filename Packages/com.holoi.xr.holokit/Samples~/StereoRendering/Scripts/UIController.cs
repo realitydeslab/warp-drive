@@ -6,29 +6,32 @@ namespace HoloKit.Samples.StereoscopicRendering
     public class UIController : MonoBehaviour
     {
         [SerializeField] private TMP_Text _renderModeText;
+        [SerializeField] private TMP_Text _recordButtonText;
+        
+        HoloKitVideoRecorder _recorder;
 
         private void Awake()
         {
-            HoloKitCamera.OnHoloKitRenderModeChanged += OnHoloKitRenderModeChanged;
+            HoloKitCameraManager.OnHoloKitRenderModeChanged += OnHoloKitRenderModeChanged;
         }
 
         private void OnDestroy()
         {
-            HoloKitCamera.OnHoloKitRenderModeChanged -= OnHoloKitRenderModeChanged;
+            HoloKitCameraManager.OnHoloKitRenderModeChanged -= OnHoloKitRenderModeChanged;
         }
 
         public void ToggleRenderMode()
         {
-            if (HoloKitCamera.Instance.RenderMode == HoloKitRenderMode.Stereo)
+            if (HoloKitCameraManager.Instance.RenderMode == HoloKitRenderMode.Stereo)
             {
-                HoloKitCamera.Instance.RenderMode = HoloKitRenderMode.Mono;
+                HoloKitCameraManager.Instance.RenderMode = HoloKitRenderMode.Mono;
             }
             else
             {
-                HoloKitCamera.Instance.RenderMode = HoloKitRenderMode.Stereo;
+                //HoloKitCameraManager.Instance.RenderMode = HoloKitRenderMode.Stereo;
 
                 // Skip NFC scanning
-                HoloKitCamera.Instance.OpenStereoWithoutNFC("SomethingForNothing");
+                HoloKitCameraManager.Instance.OpenStereoWithoutNFC("SomethingForNothing");
             }
         }
 
@@ -44,5 +47,17 @@ namespace HoloKit.Samples.StereoscopicRendering
             }
         }
 
+        public void OnPressRecordButton()
+        {
+            if (_recorder == null)
+                _recorder = FindObjectOfType<HoloKitVideoRecorder>();
+            if  (_recorder == null)
+                return;
+            
+            _recorder.ToggleRecording();
+
+            _recordButtonText.text = _recorder.IsRecording ? "Stop" : "Record";
+            _recordButtonText.color = _recorder.IsRecording ? Color.red : Color.black;
+        }
     }
 }

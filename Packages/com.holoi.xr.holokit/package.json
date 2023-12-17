@@ -31,17 +31,7 @@
     {
       "displayName": "Stereoscopic Rendering",
       "description": "Contains sample code on how to setup stereoscopic rendering",
-      "path": "Samples~/StereoRerendering"
-    },
-    {
-      "displayName": "Hand Tracking",
-      "description": "Contains sample code on how to setup Apple Vision hand tracking (this algorithm is extremyly energy consuming and not recommended for long time usage)",
-      "path": "Samples~/HandTracking"
-    },
-    {
-      "displayName": "Lite Hand Tracking",
-      "description": "Contains sample code on how to setup an alternative low energy comsuming but less precise hand tracking algorithm",
-      "path": "Samples~/SamplesLiteHandTracking"
+      "path": "Samples~/StereoRendering"
     }
   ],
   "repository": {

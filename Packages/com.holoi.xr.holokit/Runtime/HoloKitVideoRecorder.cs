@@ -334,7 +334,6 @@ namespace HoloKit {
             int length = nativeArray.Length	* sizeof(float);
             double timestamp = _clock.timestamp;
 
-
             HoloKitVideoRecorder_AppendAudioFrame(ptr, length, timestamp);
             nativeArray.Dispose();
             Debug.Log($"audio frame recorded {data.Length} time: {timestamp}");
