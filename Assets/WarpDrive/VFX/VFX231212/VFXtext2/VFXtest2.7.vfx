@@ -19,8 +19,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1280
     y: 888
-    width: 2226
-    height: 4495
+    width: 2227
+    height: 4498
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57,8 +57,8 @@ MonoBehaviour:
   m_UISuperCollapsed: 0
   m_UIInfos: {fileID: 114340500867371532}
   m_ParameterInfo:
-  - name: wall-hand
-    path: wall-hand
+  - name: Wall-Hand
+    path: Wall-Hand
     tooltip: 
     sheetType: m_Bool
     realType: Boolean
@@ -5386,7 +5386,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614971}
-  m_ExposedName: wall-hand
+  m_ExposedName: Wall-Hand
   m_Exposed: 1
   m_Order: 0
   m_Category: 
