@@ -9,7 +9,6 @@ public class Waypoint3Binder : MonoBehaviour
     public GameObject portalVfx;
     bool posFixed; 
     float timeEnteredTrigger;
-    public GameObject portal2;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +21,6 @@ public class Waypoint3Binder : MonoBehaviour
         vfxComponent.SetBool("Information module disappears", true);
     }
 
-    // Update is called once per frame
     void Update()
     {
         var vfxComponent = portalVfx.GetComponent<VisualEffect>();

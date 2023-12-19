@@ -27,7 +27,7 @@ public class Waypoint2Binder : MonoBehaviour
         if (!posFixed)
         {
             transform.position = finger.transform.position;
-            if (timeEnteredTrigger > 0f && Time.time - timeEnteredTrigger >= 1f)
+            if (timeEnteredTrigger > 0f && Time.time - timeEnteredTrigger >= 15f)
         {
             posFixed = true;
             if (vfxComponent != null)
