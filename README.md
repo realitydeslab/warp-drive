@@ -8,7 +8,7 @@
 在坐标轴同步的解决方案中我们通过每台手机在td坐标系中拿到的位置和在unity中提前确认的坐标的数据反算出基于td坐标系的统一基准，实现跨媒介交互的位置时间同步。
 
 （整个交互流程图）
-！[image]("")
+![image](https://github.com/holoi/warp-drive/blob/main/%E5%85%A8%E6%B5%81%E7%A8%8B.png)
 
 ## 软件环境
 1.unity版本： 2022.3.11f1c1或以上的3D(URP)模版的IOS系统。
@@ -52,12 +52,18 @@ unity中，你可以在Assets-WarpDrive-OSC中找到原始文件，两个空物�
 OSC 属性发送方sender
 Touchdesigner接收unity ARkit传来的信息，需要将unity中将发送信息的物体拖入Data Source,在Component中选取此物体带有的发送信息的组件，在Property中选择具体传输的数据。从unity传输不同信息可以添加多个组件，选取自己想发送给TD的信息。在本方案中将Holokit之下的Momo Camera拖入Data Source，已达到双目模式下的手机位置和TD展现出的同步。需要注意的是直接将Holokit XR Origin拖入Data Source传输位置信息可以在unity中测试成功，但无法在导入手机后传输手机的位置信息。
 
+![image](https://github.com/holoi/warp-drive/blob/main/%E4%BA%A4%E4%BA%92.jpg)
+
 
 如工程文件中：Component中，在Transform，BoxCollider，ParentConstraint里选择了Transform,以获取位置信息，Transform组件中又在下列具体选择：
 position,localposition,eulerAngles,localEulerAngles,right,up,forward,localscale,chileCount,lossyScale,hierarchyCapacity,hierarchyCount,tag,name。最后手机传输了position和eulerAngles，TD最终接收的即为这两个信息。
+![image](https://github.com/holoi/warp-drive/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE3.png)
 
 
 填写Touchdesigner所在主机的IP，端口号相同即可收到，在本案例中将unity中玩家的位置和旋转信息发送给了TD，在TD场景内显示玩家所在的实时位置，实现位置同步。在工程案例中通过select选择接收的数据并且赋值给TD中所代表ARkit的物体。
+![image](https://github.com/holoi/warp-drive/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2.png)
+
+
 
 TD使用Holokit的位置确定投影的交互效果产生的位置
 （以3台手机设备为例）
@@ -98,6 +104,8 @@ public void ActivePortal()
 
 脚本Way Point Binder主要负责同步Finger的位置，当达到一定时间后停止同步，这样就可以被固定在空间中。脚本VFX Stream Control主要控制VFX粒子的走向，这些选项已经被暴露在了VFX粒子的Inspector中，因此可以被代码读取和控制。
 
+
+
 第三人称观看和录制
 如需第三人称观看和录制，需要一位玩家的Head和Finger的位置信息，因此无需发送任何信息，只需要接收来自TD的另一台设备的Head和Finger的位置即可。
 
@@ -109,7 +117,9 @@ public void ActivePortal()
 
 
 ## VFX节点和效果截图需要的URP管线
-
+![image](https://github.com/holoi/warp-drive/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231224165706.png)
+![image](https://github.com/holoi/warp-drive/blob/main/urp%E7%AE%A1%E7%BA%BF.png)
+![image](https://github.com/holoi/warp-drive/blob/main/urp.png)
 vfx节点截图
 
 
