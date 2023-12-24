@@ -12,9 +12,13 @@
 
 ## 软件环境
 1.unity版本： 2022.3.11f1c1或以上的3D(URP)模版的IOS系统。
+
 2.[Holokit SDK](https://github.com/holoi/holokit-sdk?tab=readme-ov-file#holokit-sdk)
+
 3.AR Foundation，在Packagemanager里添加。
+
 4.[OSC Jack](https://github.com/keijiro/OscJack) 需要在大多数平台上受支持，但只有少数平台受支持 网络限制平台，如 WebGL。
+
 5.手机版本：iphone12pro及以上。
 
 ## 图像校准
