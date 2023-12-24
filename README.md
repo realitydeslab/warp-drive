@@ -32,6 +32,8 @@
 
 ARFoundation的Image Tracking功能对图像有一定要求，彩色的参考图使用黑白图片也可以追踪，大小要求见下表，橙色区域内效果较好。
 
+![image](https://github.com/holoi/warp-drive/blob/main/Assets/WarpDrive/Textures/sec.png)
+
 
 注意事项
 本项目依赖Arkit，因此运行手机必须是iPhone。由于需要进行较为精确的定位，因此强烈建议安装在有LiDAR激光雷达的Pro系列设备上（iPhone 12 Pro及以上的Pro系列手机，iPad Pro 2018及以上Pro系列平板电脑）。
