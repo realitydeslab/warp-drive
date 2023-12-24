@@ -16,7 +16,7 @@ public class GetIPFromTheDevice : MonoBehaviour
     {
         foreach (NetworkInterface item in NetworkInterface.GetAllNetworkInterfaces())
         {
-            if (item.NetworkInterfaceType == NetworkInterfaceType.Wireless80211 || item.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
+            if (item.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
             {
                 foreach (UnicastIPAddressInformation ip in item.GetIPProperties().UnicastAddresses)
                 {
