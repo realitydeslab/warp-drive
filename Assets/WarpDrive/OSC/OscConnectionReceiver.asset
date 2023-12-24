@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: OscConnectionReceiver
   m_EditorClassIdentifier: 
   type: 0
-  host: 192.168.0.120
+  host: 0.0.0.0
   port: 3333
