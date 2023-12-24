@@ -1,4 +1,4 @@
-## 交互全流程
+# 交互全流程
 
 此项目通过osc通信解决了多物质媒介之间信息传输的问题。
 
@@ -44,7 +44,7 @@ ARFoundation的Image Tracking功能对图像有一定要求，彩色的参考图
 
 
 
-## TD与arkit中的osc信息传输
+# TD与arkit中的osc信息传输
 校准完位置信息后，将正确的手机位置传输给Touchdesigner，同时Touchdesigner传输给手机对应的时间信息触发对应模块。
 
 数据的传输可通过手机热点、局域网络、本地网络进行连接，设备需要在同一网络之下，否则无法传输。数据的稳定性取决于网络环境是否优良，数据传输的距离。
@@ -53,7 +53,7 @@ ARFoundation的Image Tracking功能对图像有一定要求，彩色的参考图
 
 unity中，你可以在Assets-WarpDrive-OSC中找到原始文件，两个空物体分别绑定OSCJack中的Property Sender和Event Receiver组件，并添加OSC Connection Sender/Receiver的UDP。
 
-OSC 属性发送方sender
+## OSC 属性发送方sender
 Touchdesigner接收unity ARkit传来的信息，需要将unity中将发送信息的物体拖入Data Source,在Component中选取此物体带有的发送信息的组件，在Property中选择具体传输的数据。从unity传输不同信息可以添加多个组件，选取自己想发送给TD的信息。在本方案中将Holokit之下的Momo Camera拖入Data Source，已达到双目模式下的手机位置和TD展现出的同步。需要注意的是直接将Holokit XR Origin拖入Data Source传输位置信息可以在unity中测试成功，但无法在导入手机后传输手机的位置信息。
 
 
@@ -91,7 +91,7 @@ position数据经过处理（连接后面的math，lag，local等绿色节点）
 
 
 
-OSC 事件接收器receive
+## OSC 事件接收器receive
 OSC 事件接收器接收 OSC 消息，并使用接收到的数据。
 在我们这个案例里，unity和Touchdesigner之间相互传输消息。在unity接收Touchdesigner传来的信息时，填写unity所在主机的IP（unity应用于手机时填写手机端IP）且端口号相同即可收到信息。
 在本项目中实现了屏幕的三个时空和Holokit所展示的三个场景的同步对应。
@@ -126,7 +126,7 @@ public void ActivePortal()
 
 
 
-## VFX节点和效果截图需要的URP管线
+# VFX节点和效果截图需要的URP管线
 ![image](https://github.com/holoi/warp-drive/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231224165706.png)
 
 ![image](https://github.com/holoi/warp-drive/blob/main/urp%E7%AE%A1%E7%BA%BF.png)
