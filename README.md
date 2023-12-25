@@ -57,15 +57,16 @@ unity中，你可以在Assets-WarpDrive-OSC中找到原始文件，两个空物�
 Touchdesigner接收unity ARkit传来的信息，需要将unity中将发送信息的物体拖入Data Source,在Component中选取此物体带有的发送信息的组件，在Property中选择具体传输的数据。从unity传输不同信息可以添加多个组件，选取自己想发送给TD的信息。在本方案中将Holokit之下的Momo Camera拖入Data Source，已达到双目模式下的手机位置和TD展现出的同步。需要注意的是直接将Holokit XR Origin拖入Data Source传输位置信息可以在unity中测试成功，但无法在导入手机后传输手机的位置信息。
 
 
+
 ![image](https://github.com/holoi/warp-drive/blob/main/%E4%BA%A4%E4%BA%92.jpg)
 
 
 
-如工程文件中：Component中，在Transform，BoxCollider，ParentConstraint里选择了Transform,以获取位置信息，Transform组件中又在下列具体选择：
-position,localposition,eulerAngles,localEulerAngles,right,up,forward,localscale,chileCount,lossyScale,hierarchyCapacity,hierarchyCount,tag,name。最后手机传输了position和eulerAngles，TD最终接收的即为这两个信息。
+如工程文件中：Component中，在Transform，BoxCollider，ParentConstraint里选择了Transform,以获取位置信息，Transform组件中又在下列具体选择：position,localposition,eulerAngles,localEulerAngles,right,up,forward,localscale,chileCount,lossyScale,hierarchyCapacity,hierarchyCount,tag,name。最后手机传输了position和eulerAngles，TD最终接收的即为这两个信息。
 
 
 ![image](https://github.com/holoi/warp-drive/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE3.png)
+
 
 
 填写Touchdesigner所在主机的IP，端口号相同即可收到，在本案例中将unity中玩家的位置和旋转信息发送给了TD，在TD场景内显示玩家所在的实时位置，实现位置同步。在工程案例中通过select选择接收的数据并且赋值给TD中所代表ARkit的物体。
@@ -75,23 +76,42 @@ position,localposition,eulerAngles,localEulerAngles,right,up,forward,localscale,
 
 
 
-TD使用Holokit的位置确定投影的交互效果产生的位置
+### TD使用Holokit的位置确定投影的交互效果产生的位置
 （以3台手机设备为例）
-td作为unity和cg的中枢，包含了三个数据块工程和一个中控台，每个数据块工程都包含了base1，base2，base3，每个数据工程和base的节点连接方法都类似，其原理都是通过oscin原本的和经过绿色节点加工过的数据来控制数据块的交互。osc捕捉手机的实时位置，其数据通过oscin传入td，3个手机设备就分别对应3个不同的oscin中的数据，分别为phone1，phone2，phone3，其中只需要关注分别对应的position数据。
-position数据经过处理（连接后面的math，lag，local等绿色节点）连入相应的td工程节点。
+TD作为unity和cg的中枢，包含了三个数据块工程和一个中控台，每个数据块工程都包含了base1，base2，base3，每个数据工程和base的节点连接方法都类似，其原理都是通过oscin原本的和经过绿色节点加工过的数据来控制数据块的交互。osc捕捉手机的实时位置，其数据通过oscin传入TD，3个手机设备就分别对应3个不同的oscin中的数据，分别为phone1，phone2，phone3，其中只需要关注分别对应的position数据。
+position数据经过处理（连接后面的math，lag，local等绿色节点）连入相应的TD工程节点。
+
+
+<img width="1001" alt="six" src="https://github.com/holoi/warp-drive/assets/148427075/e090aeaa-d08c-45d1-a900-814cb391f3c9">
+
 
 （每个节点都一一对应）
 如第一个工程中的base1
 
+
+<img width="769" alt="seven" src="https://github.com/holoi/warp-drive/assets/148427075/87aa8948-56c6-494d-bdfe-76a43a6b7445">
+
+
+
 其中的parent(2).op('lag2')['phone1/position3']与osein连接的lag2相连
 
-将数据都连接好之后，人移动的位置就会被Holokit捕捉到，传输给td，触发交互
+
+<img width="736" alt="td数据连接" src="https://github.com/holoi/warp-drive/assets/148427075/5bc94c72-ab0c-47e6-bb75-d8d5d1302edb">
+
+
+将数据都连接好之后，人移动的位置就会被Holokit捕捉到，传输给TD，触发交互
+
+
+![TD中控场景](https://github.com/holoi/warp-drive/assets/148427075/369a1c6c-9cbc-487d-9030-0a9c444eb2e1)
+
+
+
+https://github.com/holoi/warp-drive/assets/148427075/26d48232-5753-43b9-9670-8c0f55bc324f
 
 
 
 
-
-## OSC 事件接收器receive
+## OSC 事件接收器receiver
 OSC 事件接收器接收 OSC 消息，并使用接收到的数据。
 在我们这个案例里，unity和Touchdesigner之间相互传输消息。在unity接收Touchdesigner传来的信息时，填写unity所在主机的IP（unity应用于手机时填写手机端IP）且端口号相同即可收到信息。
 在本项目中实现了屏幕的三个时空和Holokit所展示的三个场景的同步对应。
@@ -99,14 +119,29 @@ OSC 监视器
 OSC Monitor 是一个用于检查传入 OSC 消息的小型实用程序。打开 监视器，导航到窗口> OSC 监视器。
 如下方，unity接收到了TD传来的时间信息并显示在了OSC Monitor中。
 
+
+![ten](https://github.com/holoi/warp-drive/assets/148427075/6c68417c-9247-47bb-abb5-fde6a33e7c28)
+
+
+
 运用接收到的TD信息：Holokit需要从TD同步时间轴，在指定时间开启相应的组件。
 
 OSCAddress内填写OSC Monitor接收的信息名称（如上图在/second和/frame中选择了/second，选择Date Type的类型，用于脚本，以直接调用收到的数据）。
 
 
+![receiver](https://github.com/holoi/warp-drive/assets/148427075/acc162d5-9fe1-4047-9cb9-31341a92ccc1)
+
+
+
 Receive form中，使用
 public void ActivePortal()
 声明好需要使用到的方法变量，例如，输出是Float，就填入（Float time），然后选择好对应的Data Type，就可以在** Event中找到对应的事件了。
+
+
+
+![twelve](https://github.com/holoi/warp-drive/assets/148427075/a7a1a184-55fb-46e2-a87a-605eabecaa25)
+
+
 
 新建一个空物体TimelineController并挂上OSC Timeline脚本，写好每一个时间段需要启用的组件，并绑定场景中的Portal组件。每一个Portal中都有三个Wall Collider，在脚本Wall Collider Trigger中检查他们的Tag，从而在不同的方向激活Portal VFX。
 
@@ -131,10 +166,11 @@ public void ActivePortal()
 
 ![image](https://github.com/holoi/warp-drive/blob/main/urp%E7%AE%A1%E7%BA%BF.png)
 
-
-vfx节点截图
 ![image](https://github.com/holoi/warp-drive/blob/main/urp.png)
 
+vfx节点截图
+
+![forteen](https://github.com/holoi/warp-drive/assets/148427075/f11c024c-4d22-4685-b625-7dd220a6ecc5)
 
 
 
