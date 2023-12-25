@@ -22,16 +22,12 @@ public class Waypoint1Binder : MonoBehaviour
     }
 
     void Update()
-{
-    var vfxComponent = portalVfx.GetComponent<VisualEffect>();
-    if (!posFixed)
     {
-            if (vfxComponent != null)
-            {
-                vfxComponent.SetBool("Wall-Hand", true); // 设置Wall-Hand为true
-            }
-        transform.position = finger.transform.position;
-        if (timeEnteredTrigger > 0f && Time.time - timeEnteredTrigger >= 15f)
+        var vfxComponent = portalVfx.GetComponent<VisualEffect>();
+        if (!posFixed)
+        {
+            transform.position = finger.transform.position;
+            if (timeEnteredTrigger > 0f && Time.time - timeEnteredTrigger >= 15f)
         {
             posFixed = true;
             if (vfxComponent != null)
@@ -41,9 +37,8 @@ public class Waypoint1Binder : MonoBehaviour
                     
             }
         }
+        }
     }
-
-}
 
 
     
