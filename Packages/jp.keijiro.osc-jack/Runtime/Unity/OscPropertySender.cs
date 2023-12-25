@@ -14,6 +14,12 @@ namespace OscJack
 
         [SerializeField] OscConnection _connection = null;
         [SerializeField] string _oscAddress = "/unity";
+
+        public string OscAddress
+        {
+            get { return _oscAddress; }
+            set { _oscAddress = value; }
+        }
         [SerializeField] Component _dataSource = null;
         [SerializeField] string _propertyName = "";
         [SerializeField] bool _keepSending = false;
