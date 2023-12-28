@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/WarpDrive/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/WarpDrive/Scenes/WarpDrive.unity
     guid: d21e5357fc04045798dce6644e685b06
+  - enabled: 1
+    path: Assets/WarpDrive/Scenes/WarpDrive for Shooting.unity
+    guid: d401cd38f1dd649bcbfb6da519e9c9e0
   m_configObjects:
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 8a4bfadb178094a529adb84cfc728da1, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: e5e187a620e96436297f0fc338cce359, type: 2}

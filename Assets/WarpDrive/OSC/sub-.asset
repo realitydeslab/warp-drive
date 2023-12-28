@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: sub-
   m_EditorClassIdentifier: 
   type: 0
-  host: 172.20.10.6
-  port: 9999
+  host: 192.168.50.201
+  port: 5555

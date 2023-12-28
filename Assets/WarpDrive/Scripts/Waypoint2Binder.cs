@@ -54,13 +54,13 @@ public class Waypoint2Binder : MonoBehaviour
     }
 
 
-    private void OnTriggerExit(Collider other)
+    /*private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "trigger1" || other.gameObject.tag == "trigger2" || other.gameObject.tag == "trigger3")
         {
             timeEnteredTrigger = 0f;
         }
-    }
+    }*/
 }
 
 

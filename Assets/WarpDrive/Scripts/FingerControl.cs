@@ -16,8 +16,8 @@ public class FingerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        finger.SetActive(false);
-        finger.GetComponent<ParentConstraint>().constraintActive = true;
+        //finger.SetActive(false);
+        //finger.GetComponent<ParentConstraint>().constraintActive = true;
         lastFingerPosition = originFinger.transform.position;
     }
 
