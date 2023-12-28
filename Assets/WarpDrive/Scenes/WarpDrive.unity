@@ -4223,7 +4223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e43cc78b62f2184d8bebe41bd574f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _connection: {fileID: 11400000, guid: 15894e32d28929543846609c3c4c2b41, type: 2}
+  _connection: {fileID: 0}
   _oscAddress: /camera1/position
   _dataSource: {fileID: 1578796424}
   _propertyName: position
@@ -4796,9 +4796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1113988190}
-  - component: {fileID: 1113988189}
   - component: {fileID: 1113988191}
-  - component: {fileID: 1113988192}
   m_Layer: 0
   m_Name: "Change UDP\u2019s Settings"
   m_TagString: Untagged
@@ -4806,20 +4804,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1113988189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113988188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0820d2e3eea1a704fa7027a046f0394e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscConnection: {fileID: 11400000, guid: 15894e32d28929543846609c3c4c2b41, type: 2}
-  hostInputField: {fileID: 1478386929}
 --- !u!4 &1113988190
 Transform:
   m_ObjectHideFlags: 0
@@ -4844,26 +4828,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1113988188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0820d2e3eea1a704fa7027a046f0394e, type: 3}
+  m_Script: {fileID: 11500000, guid: 554a418dce5eb4113be52065d88ab537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oscConnection: {fileID: 11400000, guid: 9d7be07c653ce3047a426cf033ad180d, type: 2}
-  hostInputField: {fileID: 2146040644}
---- !u!114 &1113988192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113988188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0da55c0d174e0f84aa05c1303ec2d9cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  addressInputField: {fileID: 448459365}
-  targetOscAddress: /unity
-  targetObject: {fileID: 748120094}
+  oscConnection: {fileID: 0}
+  hostInputField: {fileID: 0}
+  portInputField: {fileID: 0}
 --- !u!1 &1114236716
 GameObject:
   m_ObjectHideFlags: 0

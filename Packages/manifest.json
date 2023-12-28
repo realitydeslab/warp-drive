@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.holoi.xr.holokit": "https://github.com/holoi/holokit-sdk.git?path=Packages/com.holoi.xr.holokit/",
     "com.unity.feature.development": "1.0.1",
     "com.unity.render-pipelines.universal": "14.0.9",
     "com.unity.textmeshpro": "3.0.6",
@@ -8,7 +9,6 @@
     "com.unity.visualeffectgraph": "14.0.9",
     "com.unity.visualscripting": "1.9.1",
     "com.unity.xr.arkit": "5.1.1",
-    "com.holoi.xr.holokit": "https://github.com/holoi/holokit-sdk.git?path=Packages/com.holoi.xr.holokit/",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
